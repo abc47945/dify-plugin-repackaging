@@ -69,7 +69,10 @@ jobs:
           market \
           "${{ github.event.inputs.plugin_author }}" \
           "${{ github.event.inputs.plugin_name }}" \
-          "${{ github.event.inputs.plugin_version }}"
+          "${{ github.event.inputs.plugin_version }}" \
+          -- \
+          --no-binary=gevent \
+          --force-reinstall
 
       - name: Find repackaged artifact
         run: |
