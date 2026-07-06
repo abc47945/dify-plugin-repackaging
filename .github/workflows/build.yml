@@ -52,7 +52,7 @@ jobs:
       - name: Install system dependencies for gevent
         run: |
           sudo apt-get update
-          sudo apt-get install -y libev-dev libuv-dev python3-dev build-essential
+          sudo apt-get install -y libev-dev libuv1-dev python3-dev build-essential
 
       - name: Make plugin_repackaging.sh executable
         run: chmod +x ./plugin_repackaging.sh
